@@ -1,0 +1,19 @@
+.aui-header a{
+	color:#666;
+}
+
+.num1{
+	position: absolute;
+    right: 5px;
+    top: 4px;
+    display: block;
+    width: 1.67em;
+    height: 1.67em;
+    font-size: 0.429em;
+    color: #fff;
+    text-align: center;
+    background: #fe6e12;
+    line-height: 1.67em;
+    border-radius: 50%;
+    font-style: normal;
+}

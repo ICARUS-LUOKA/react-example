@@ -1,0 +1,15 @@
+.ss-aui{
+	padding-left:40px;
+	font-style:normal;
+	padding-bottom:10px;
+	display:block;
+	line-height:34px;
+	font-size:16px;
+	color:#888;
+
+}
+#add,#min{ color: #FF3366;}
+.xuan{float: right}
+.xuan input{ border:none; text-align:center; height:1.429em; width:2em;}
+.xuan .count{display: inline-block;width: 3em;text-align: center;border: 1px solid grey;margin: 0 8px 0 8px;}
+.xuan .delete{display: inline-block;margin-left: 1em;color: #666;padding: 0 5px 0 5px;}

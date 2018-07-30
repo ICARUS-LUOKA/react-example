@@ -1,0 +1,67 @@
+1.redux
+
+1.1 index.js
+import {createStore} from 'redux'
+import reducer from './store/reducer'
+import state from './store/state'
+let store = createStore(reducer,state)
+
+import {Provider} from 'react-redux';
+    <Provider store = {store} >
+        <BroswerRouter>
+            <Route component={App} />
+        <BroswerRouter />
+    <Provider />
+
+1.2reducer.js
+const reducer = (state,{type,payload}) =>{
+    switch(type){
+        case 1:
+            //业务逻辑
+            return
+        case 2:
+            //业务逻辑
+            return
+        default :
+        return state
+    }
+}
+export default reducer
+
+2.react-redux
+connect()(UI)   容器组件  谁用state谁连接
+index.js 中引入react-redux
+import {Provider} extends 'react-redux'
+
+使用react-redux的Provider接管index中的store
+<Provider store={store}>
+    //...
+</Provider>
+
+在App中，import{connect} from 'react-redux'
+const mapStateToProps=(state,ownerProps)=>{
+        //从外面拿数据
+        //state是状态仓库的数据
+        //ownProps是组件自身的props(若有)
+        return {}   //作为props返回给UI组件
+    }
+const mapDispatchToProps=(dispatch,ownerProps)=>{
+        //将数据发送出去
+        //dispatch用来和reducer进行通讯
+        return {
+            ADD_ITEM:(action)=>{
+                数据递交在此处操作
+                dispatch(action)
+            }
+        }   
+    }
+connect调用时接收Provider传过来的仓库内容以及reducer的type类型，以上两个函数作为参数接收传过来的内容
+export default connect(mapStateToProps,mapDispatchToProps)(App)
+
+在index中  import App from './App.js'
+<Provider store={store}>
+    <App />
+</Provider>
+此时内容就连接起来了
+
+公共业务逻辑，异步请求交给中间件完成

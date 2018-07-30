@@ -1,0 +1,9 @@
+.mui-page .mui-table-view:first-child {
+    margin-top: 10px;
+}
+.mui-page .mui-table-view:last-child {
+    margin-bottom: 30px;
+}
+.mui-table-view {
+    margin-top: 10px;
+}
